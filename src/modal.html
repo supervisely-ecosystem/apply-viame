@@ -1,0 +1,32 @@
+<div>
+
+    <div class="fflex align-start">
+        <el-checkbox v-model="state.merge_predictions" class="mt10 mr10"></el-checkbox>
+        <sly-field class="mt20"
+                   title="Add predictions to current project"
+                   description="Uncheck if you want to create a separate project with predictions">
+        </sly-field>
+    </div>
+
+    <div class="fflex align-start" style="flex-direction: column; margin: 0 0 20px 0"
+         v-if="!state.merge_predictions">
+        <sly-field
+                title="Result Project Name"
+                description="Enter project name manually (optional) or keep empty to generate it automatically">
+        </sly-field>
+        <el-input placeholder="Enter Project Name" v-model="state.project_name"></el-input>
+    </div>
+
+    <div class="fflex align-start">
+        <sly-field class="mt20"
+                   title="Select VIAME pipeline"
+                   description="">
+        </sly-field>
+        <el-select v-model="state.viame_pipeline" placeholder="Select the VIAME pipeline">
+            <el-option
+                :value="detector_habcam_test_yolo_only.pipe">
+            </el-option>
+        </el-select>
+    </div>
+
+</div>

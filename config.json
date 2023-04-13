@@ -10,13 +10,15 @@
   "headless": true,
   "modal_template": "src/modal.html",
     "modal_template_state": {
-    "pipe": ""
+    "viame_pipeline": "",
+    "merge_predictions": true,
+    "project_name": ""
   },
   "need_gpu": true,
   "community_agent": false,
   "docker_image": "kitware/viame-worker:latest",
   "instance_version": "6.6.7",
-  "entrypoint": "sh -e run.sh",
+  "entrypoint": "bash run.sh",
   "port": 8000,
   "task_location": "workspace_tasks",
   "context_menu": {
