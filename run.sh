@@ -19,6 +19,8 @@ python3 src/get_pipe.py
 PIPE=$(cat "pipe.txt")
 echo $PIPE
 
+echo $(id)
+
 ### VIAME
 export VIAME_INSTALL="/opt/noaa/viame"
 source ${VIAME_INSTALL}/setup_viame.sh

@@ -18,7 +18,7 @@
   "community_agent": false,
   "docker_image": "kitware/viame-worker:latest",
   "instance_version": "6.6.7",
-  "entrypoint": "bash run.sh",
+  "entrypoint": "sudo bash run.sh",
   "port": 8000,
   "task_location": "workspace_tasks",
   "context_menu": {
