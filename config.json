@@ -1,0 +1,25 @@
+{
+  "name": "Apply VIAME",
+  "type": "app",
+  "version": "2.0.0",
+  "description": "",
+  "categories": [
+    "neural network",
+    "images"
+  ],
+  "headless": true,
+  "modal_template": "src/modal.html",
+    "modal_template_state": {
+    "pipe": ""
+  },
+  "need_gpu": true,
+  "community_agent": false,
+  "docker_image": "kitware/viame-worker:latest",
+  "instance_version": "6.6.7",
+  "entrypoint": "sh -e run.sh",
+  "port": 8000,
+  "task_location": "workspace_tasks",
+  "context_menu": {
+    "target": ["images_project", "images_dataset"]
+  }
+}

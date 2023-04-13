@@ -1,0 +1,2 @@
+input_images/image_01.jpg
+input_images/image_02.jpg

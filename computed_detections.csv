@@ -1,0 +1,16 @@
+# 1: Detection or Track-id,  2: Video or Image Identifier,  3: Unique Frame Identifier,  4-7: Img-bbox(TL_x,TL_y,BR_x,BR_y),  8: Detection or Length Confidence,  9: Target Length (0 or -1 if invalid),  10-11+: Repeated Species, Confidence Pairs or Attributes
+# Written on: Wed Apr 12 15:49:44 2023   by: write_detected_object_set_viame_csv
+0,image_01.jpg,0,442.5,405,977.5,1402.5,0.722656,0,fish,0.722656
+1,image_01.jpg,0,1029,710,1280,1280,0.71921,0,fish,0.71921
+2,image_01.jpg,0,218,227,640,428,0.677256,0,fish,0.677256
+3,image_01.jpg,0,385,415,612.5,827.5,0.673436,0,fish,0.673436
+4,image_01.jpg,0,810,264,968,425,0.569733,0,fish,0.569733
+5,image_01.jpg,0,640,960,850,1371,0.314814,0,fish,0.314814
+6,image_01.jpg,0,0,503,464,640,0.288771,0,fish,0.288771
+7,image_01.jpg,0,800,357.5,1177.5,1172.5,0.180869,0,fish,0.180869
+8,image_01.jpg,0,0,640,482,849,0.116463,0,fish,0.116463
+9,image_01.jpg,0,575,43,640,142,0.102004,0,fish,0.102004
+10,image_02.jpg,1,543.75,365.625,699.375,470.625,0.924393,0,fish,0.924393
+11,image_02.jpg,1,641.25,646.875,836.25,716.25,0.799478,0,fish,0.799478
+12,image_02.jpg,1,20.625,446.25,258.75,547.5,0.769935,0,fish,0.769935
+13,image_02.jpg,1,761.25,729.375,806.25,759.375,0.129646,0,fish,0.129646
