@@ -1,0 +1,47 @@
+# ==============================================================================
+# ResNet Classifier
+# ==============================================================================
+
+process detector_input
+  :: image_filter
+  :filter:type                                 vxl_convert_image
+
+  block filter:vxl_convert_image
+    :format                                    byte
+    :force_three_channel                       true
+  endblock
+
+# ==============================================================================
+
+process detector
+  :: image_object_detector
+  :detector:type                               full_frame
+  :detector:full_frame:detection_type          generic_object_proposal
+
+include $ENV{VIAME_INSTALL}/configs/pipelines/common_default_descriptor.pipe
+
+process svm_refiner
+  :: refine_detections
+  :refiner:type                                svm_refine
+  relativepath refiner:svm_refine:model_dir =  .
+
+connect from detector_input.image
+        to   detector.image
+
+connect from detector_input.image
+        to   descriptor.image
+connect from detector.detected_object_set
+        to   descriptor.detected_object_set
+
+connect from detector_input.image
+        to   svm_refiner.image
+connect from descriptor.detected_object_set
+        to   svm_refiner.detected_object_set
+
+# ==============================================================================
+
+process detector_output
+  :: merge_detection_sets
+
+connect from svm_refiner.detected_object_set
+        to   detector_output.detected_object_set1

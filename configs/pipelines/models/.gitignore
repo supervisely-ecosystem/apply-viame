@@ -1,0 +1,12 @@
+*
+!burnout_default_classifier.adb
+!default_cfrnn.py
+!default_cfrnn.lbl
+!generic_cfrnn.py
+!generic_cfrnn.lbl
+!cfrnn_train.py
+!yolo_train.cfg
+!.gitignore
+!scallop_yolo_v7_one_class.cfg
+!scallop_yolo_v7_one_class.lbl
+!scallop_yolo_v7_one_class.weights
