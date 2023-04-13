@@ -7,6 +7,6 @@ tmp/
 .flake8
 .venv/
 .DS_Store
-configs
+configs_
 todo
 input_project

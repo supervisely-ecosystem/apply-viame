@@ -11,7 +11,7 @@ project_path = "input_project"
 if os.path.exists(project_path):
     shutil.rmtree(project_path)
 
-sly.download_project(g.api, g.PROJECT_ID, project_path, batch_size=50)
+sly.download_project(g.api, g.PROJECT_ID, project_path, dataset_ids=g.DATASET_ID, batch_size=50, log_progress=True)
 
 project = sly.Project(project_path, sly.OpenMode.READ)
 

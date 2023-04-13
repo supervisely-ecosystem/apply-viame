@@ -7,7 +7,7 @@ api = sly.Api.from_env()
 TEAM_ID = int(sly.env.team_id())
 WORKSPACE_ID = int(sly.env.workspace_id())
 
-PROJECT_ID = 16080
+PROJECT_ID = None
 DATASET_ID = None
 
 if os.environ.get("modal.state.slyProjectId") is not None:

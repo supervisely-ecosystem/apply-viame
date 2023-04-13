@@ -22,8 +22,8 @@ echo $PIPE
 ### VIAME
 export VIAME_INSTALL="/opt/noaa/viame"
 source ${VIAME_INSTALL}/setup_viame.sh
-# kwiver runner ${VIAME_INSTALL}/configs/pipelines/${PIPE} \
-#     -s input:video_filename=input_images.txt
+kwiver runner ${VIAME_INSTALL}/configs/pipelines/${PIPE} \
+    -s input:video_filename=input_images.txt
 ### END VIAME
 
 # Restore environment state from the file

@@ -12,7 +12,7 @@
     "modal_template_state": {
     "viame_pipeline": "",
     "merge_predictions": true,
-    "project_name": ""
+    "output_project_name": ""
   },
   "need_gpu": true,
   "community_agent": false,

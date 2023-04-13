@@ -14,7 +14,7 @@
                 title="Result Project Name"
                 description="Enter project name manually (optional) or keep empty to generate it automatically">
         </sly-field>
-        <el-input placeholder="Enter Project Name" v-model="state.project_name"></el-input>
+        <el-input placeholder="Enter Project Name" v-model="state.output_project_name"></el-input>
     </div>
 
     <div class="fflex align-start">
@@ -22,8 +22,9 @@
                    title="Select VIAME pipeline"
                    description="">
         </sly-field>
-        <el-select v-model="state.viame_pipeline" placeholder="Select the VIAME pipeline">
+        <el-select v-model="state.viame_pipeline" placeholder="Select a VIAME pipeline">
             <el-option
+                :key="detector_habcam_test_yolo_only.pipe"
                 :value="detector_habcam_test_yolo_only.pipe">
             </el-option>
         </el-select>
