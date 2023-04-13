@@ -1,5 +1,25 @@
 <div>
 
+    <!-- PIPELINE -->
+    <div class="fflex align-start">
+        <el-select v-model="state.viame_pipeline" placeholder="Select VIAME pipeline">
+            <el-option
+                key="detector_habcam_test_yolo_only.pipe"
+                value="detector_habcam_test_yolo_only.pipe">
+            </el-option>
+            <el-option
+                key="detector_habcam_measure_scallops_four_class.pipe"
+                value="detector_habcam_measure_scallops_four_class.pipe">
+            </el-option>
+        </el-select>
+    </div>
+    
+    <!-- THRESHOLD -->
+    <div class="fflex align-start">
+        <el-input-number v-model="state.threshold" class="mt10 mr10" :step="0.01" :min="0" :max="1"></el-input-number>
+    </div>
+
+    <!-- MERGE PREDICTIONS -->
     <div class="fflex align-start">
         <el-checkbox v-model="state.merge_predictions" class="mt10 mr10"></el-checkbox>
         <sly-field class="mt20"
@@ -8,6 +28,7 @@
         </sly-field>
     </div>
 
+    <!-- OUTPUT PROJECT NAME -->
     <div class="fflex align-start" style="flex-direction: column; margin: 0 0 20px 0"
          v-if="!state.merge_predictions">
         <sly-field
@@ -15,15 +36,6 @@
                 description="Enter project name manually (optional) or keep empty to generate it automatically">
         </sly-field>
         <el-input placeholder="Enter Project Name" v-model="state.output_project_name"></el-input>
-    </div>
-
-    <div class="fflex align-start">
-        <el-select v-model="state.viame_pipeline" placeholder="Select VIAME pipeline">
-            <el-option
-                key="detector_habcam_test_yolo_only.pipe"
-                value="detector_habcam_test_yolo_only.pipe">
-            </el-option>
-        </el-select>
     </div>
 
 </div>
