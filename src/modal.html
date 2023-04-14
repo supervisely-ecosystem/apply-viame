@@ -15,8 +15,8 @@
     </div>
     
     <!-- THRESHOLD -->
-    <div class="fflex align-start">
-        <sly-field class="mt20"
+    <div class="fflex align-start" style="flex-direction: column; margin: 0 0 20px 0">
+        <sly-field
             title="Confidence threshold"
             description="Predictions below threshold will be skiped">
         </sly-field>
@@ -27,8 +27,8 @@
     <div class="fflex align-start">
         <el-checkbox v-model="state.merge_predictions" class="mt10 mr10"></el-checkbox>
         <sly-field class="mt20"
-                   title="Add predictions to current project"
-                   description="Uncheck if you want to create a separate project with predictions">
+                   title="Merge predictions with current project"
+                   description="If unchecked a separate project with predictions will be created">
         </sly-field>
     </div>
 
