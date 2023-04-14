@@ -133,3 +133,7 @@ if g.merge_predictions:
         progress.iter_done()
 else:
     api.annotation.upload_anns(img_ids, anns, skip_bounds_validation=True, progress_cb=progress.iters_done)
+
+if sly.env.task_id(False):
+    task_id = sly.env.task_id()
+    api.task.set_output_project(task_id, output_project_id)
