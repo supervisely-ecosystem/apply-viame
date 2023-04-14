@@ -21,4 +21,5 @@ if not threshold:
     print("DEBUG:::not threshold")
     threshold = 0.1
 else:
+    threshold = float(threshold)
     print("OK. Remove this in globals.py")
