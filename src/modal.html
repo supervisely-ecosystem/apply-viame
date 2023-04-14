@@ -15,12 +15,12 @@
     </div>
     
     <!-- THRESHOLD -->
-    <div class="fflex align-start" style="flex-direction: column; margin: 0 0 20px 0">
+    <div class="fflex align-start mt10" style="flex-direction: column; margin: 0 0 20px 0">
         <sly-field
             title="Confidence threshold"
             description="Predictions below threshold will be skiped">
         </sly-field>
-        <el-input-number v-model="state.threshold" class="mt10 mr10" :step="0.01" :min="0" :max="1"></el-input-number>
+        <el-input-number v-model="state.threshold" :step="0.01" :min="0" :max="1"></el-input-number>
     </div>
 
     <!-- MERGE PREDICTIONS -->
