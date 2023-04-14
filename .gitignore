@@ -11,3 +11,5 @@ configs_
 todo
 input_project
 input_images.txt
+computed_detections_pruned.csv
+computed_detections.csv

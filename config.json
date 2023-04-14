@@ -17,9 +17,9 @@
   },
   "need_gpu": true,
   "community_agent": false,
-  "docker_image": "kitware/viame-worker:latest",
+  "docker_image": "supervisely/viame:1.0.0",
   "instance_version": "6.6.7",
-  "entrypoint": "sudo bash run.sh",
+  "entrypoint": "bash run.sh",
   "port": 8000,
   "task_location": "workspace_tasks",
   "context_menu": {

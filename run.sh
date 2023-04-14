@@ -1,9 +1,3 @@
-# set -e
-
-# TODO: debug
-export WORKSPACE_ID=662
-export PROJECT_ID=16080
-
 PATH_=$PATH
 
 echo $(which python3)
@@ -21,7 +15,7 @@ echo $(cat "input_images.txt")
 PIPE=$(env | grep modal.state.viame_pipeline | cut -d= -f2)
 
 if [[ -z "$PIPE" ]]; then
-    PIPE="detector_habcam_measure_scallops_four_class.pipe"
+    PIPE="detector_sefsc_bw_species_v2.4m_1.0x.pipe"
 fi
 
 echo $PIPE
@@ -30,12 +24,11 @@ echo $PIPE
 rm computed_detections.csv
 export VIAME_INSTALL="/opt/noaa/viame"
 source ${VIAME_INSTALL}/setup_viame.sh
-kwiver runner configs/pipelines/${PIPE} \
+kwiver runner ${VIAME_INSTALL}/configs/pipelines/${PIPE} \
     -s input:video_filename=input_images.txt
 ### END VIAME
 
 # Restore environment state from the file
-# source env_state.txt
 export PATH=$PATH_
 unset PYTHON_LIBRARY
 unset PYTHONPATH
