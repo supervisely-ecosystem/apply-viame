@@ -11,7 +11,7 @@
   "modal_template": "src/modal.html",
     "modal_template_state": {
     "viame_pipeline": "",
-    "merge_predictions": false,
+    "create_project": true,
     "output_project_name": "",
     "threshold": 0.5
   },

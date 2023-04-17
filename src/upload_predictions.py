@@ -3,6 +3,7 @@ import pandas as pd
 import globals as g
 from collections import defaultdict
 
+
 def get_tag_meta_or_create(api: sly.Api, project_id: int, meta: sly.ProjectMeta, tag_meta: sly.TagMeta):
     tag_meta_existed = meta.get_tag_meta(tag_meta.name)
     if not tag_meta_existed:
@@ -35,6 +36,7 @@ def prune_csv(csv_file, out_path):
             f.write(line)
 
     sly.logger.debug(f"last pruned csv line: {line}")
+
 
 def collect_predictions_csv(csv_file):    
     # {ds1: {img1: [preds], img2: [preds]}}
@@ -78,26 +80,27 @@ def collect_predictions_csv(csv_file):
 
 api = g.api
 
-if not g.merge_predictions:
+sly.Progress("Parsing predictions...", 1)
+
+# Create project
+if g.create_project:
     free_name = api.project.get_free_name(g.WORKSPACE_ID, g.output_project_name)
     api.project.clone(g.PROJECT_ID, g.WORKSPACE_ID, free_name)
     output_project_id = api.project.get_info_by_name(g.WORKSPACE_ID, free_name).id
 else:
     output_project_id = g.PROJECT_ID
 
-dsid = api.dataset.get_list(output_project_id)[0].id
-print(f"https://dev.supervise.ly/app/images/440/662/{output_project_id}/{dsid}")
-
+# Parse csv
 prune_csv("computed_detections.csv", "computed_detections_pruned.csv")
 pred_datasets = collect_predictions_csv("computed_detections_pruned.csv")
-# print(pred_datasets)
 
+# Create tag for conf
 meta = sly.ProjectMeta.from_json(api.project.get_meta(output_project_id))
-
 tag_name = "confidence"
 conf_tag = sly.TagMeta(tag_name, sly.TagValueType.ANY_NUMBER, applicable_to=sly.TagApplicableTo.OBJECTS_ONLY)
 meta, conf_tag = get_tag_meta_or_create(api, output_project_id, meta, conf_tag)
 
+# Collect predictions
 datasets = api.dataset.get_list(output_project_id)
 anns = []
 img_ids = []
@@ -127,7 +130,8 @@ for dataset in datasets:
 
 print("Uploading annotations...")
 progress = sly.Progress("Uploading annotations...", total_cnt=len(img_ids))
-if g.merge_predictions:
+if not g.create_project:
+    # append labels to the existed project
     for img_id, ann in zip(img_ids, anns):
         api.annotation.append_labels(img_id, ann.labels, skip_bounds_validation=True)
         progress.iter_done()

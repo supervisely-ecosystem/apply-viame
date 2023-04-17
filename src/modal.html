@@ -3,7 +3,7 @@
     <!-- PIPELINE -->
     <div class="fflex align-start" style="flex-direction: column; margin: 0 0 10px 0">
         <sly-field
-            title="Select VIAME pipeline">
+            title="Select VIAME pipeline:">
         </sly-field>
         <el-select v-model="state.viame_pipeline" placeholder="VIAME pipeline">
             <el-option
@@ -11,8 +11,40 @@
                 value="detector_habcam_test_yolo_only.pipe">
             </el-option>
             <el-option
+                key="detector_habcam_test_hrnet_only.pipe"
+                value="detector_habcam_test_hrnet_only.pipe">
+            </el-option>
+            <el-option
+                key="detector_habcam_test_cfrnn_only.pipe"
+                value="detector_habcam_test_cfrnn_only.pipe">
+            </el-option>
+            <el-option
+                key="detector_habcam_test_multi_species_only.pipe"
+                value="detector_habcam_test_multi_species_only.pipe">
+            </el-option>
+            <el-option
                 key="detector_sefsc_bw_species_v2.4m_0.5x.pipe"
                 value="detector_sefsc_bw_species_v2.4m_0.5x.pipe">
+            </el-option>
+            <el-option
+                key="detector_sefsc_bw_species_v2.4m_1.0x.pipe"
+                value="detector_sefsc_bw_species_v2.4m_1.0x.pipe">
+            </el-option>
+            <el-option
+                key="detector_sefsc_bw_species_v2.4m_2.0x.pipe"
+                value="detector_sefsc_bw_species_v2.4m_2.0x.pipe">
+            </el-option>
+            <el-option
+                key="detector_sefsc_bw_species_v2.4s_0.5x.pipe"
+                value="detector_sefsc_bw_species_v2.4s_0.5x.pipe">
+            </el-option>
+            <el-option
+                key="detector_sefsc_bw_species_v2.4s_1.0x.pipe"
+                value="detector_sefsc_bw_species_v2.4s_1.0x.pipe">
+            </el-option>
+            <el-option
+                key="detector_sefsc_bw_species_v2.4s_2.0x.pipe"
+                value="detector_sefsc_bw_species_v2.4s_2.0x.pipe">
             </el-option>
         </el-select>
     </div>
@@ -28,7 +60,7 @@
 
     <!-- MERGE PREDICTIONS -->
     <div class="fflex align-start">
-        <el-checkbox v-model="state.merge_predictions" class="mt10 mr10"></el-checkbox>
+        <el-checkbox v-model="state.create_project" class="mt10 mr10"></el-checkbox>
         <sly-field class="mt20"
                    title="Merge predictions with current project"
                    description="If unchecked a separate project with predictions will be created">
@@ -37,10 +69,10 @@
 
     <!-- OUTPUT PROJECT NAME -->
     <div class="fflex align-start" style="flex-direction: column; margin: 0 0 20px 0"
-         v-if="!state.merge_predictions">
+         v-if="state.create_project">
         <sly-field
-                title="Result Project Name"
-                description="Enter project name manually (optional) or keep empty to generate it automatically">
+                title="Output Project Name (optional)"
+                description="Enter the project name or keep empty to generate automatically">
         </sly-field>
         <el-input placeholder="Enter Project Name" v-model="state.output_project_name"></el-input>
     </div>

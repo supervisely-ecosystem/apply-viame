@@ -27,3 +27,5 @@ for dataset in project.datasets:
         imgs.append(dataset.get_img_path(item))
 
 dump_image_list(imgs, path="input_images.txt")
+
+sly.Progress("Model inference...", total_cnt=1)
