@@ -83,6 +83,7 @@ api = g.api
 sly.Progress("Parsing predictions...", 1)
 
 # Create project
+sly.logger.debug(f"g.create_project={g.create_project}")
 if g.create_project:
     free_name = api.project.get_free_name(g.WORKSPACE_ID, g.output_project_name)
     api.project.clone(g.PROJECT_ID, g.WORKSPACE_ID, free_name)
