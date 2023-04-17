@@ -142,10 +142,13 @@ progress = sly.Progress("Uploading annotations...", total_cnt=len(img_ids))
 if not g.create_project:
     # append labels to the existed project
     for img_id, ann in zip(img_ids, anns):
+        # sdk issue: this won't append confidence tag
         api.annotation.append_labels(img_id, ann.labels, skip_bounds_validation=True)
         progress.iter_done()
 else:
-    api.annotation.upload_anns(img_ids, anns, skip_bounds_validation=True, progress_cb=progress.iters_done)
+    for img_id, ann in zip(img_ids, anns):
+        api.annotation.upload_ann(img_id, ann, skip_bounds_validation=True)
+        progress.iter_done()
 
 if sly.env.task_id(False):
     task_id = sly.env.task_id()

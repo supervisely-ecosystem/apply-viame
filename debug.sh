@@ -1,8 +1,8 @@
-set -e
+# set -e
 
 # debug
 export WORKSPACE_ID=662
-export PROJECT_ID=16080
+export PROJECT_ID=20025
 
 PATH_=$PATH
 
@@ -15,7 +15,7 @@ PIPE=$(env | grep modal.state.viame_pipeline | cut -d= -f2)
 if [[ -z "$PIPE" ]]; then
     # debug
     rm computed_detections.csv
-    PIPE="detector_habcam_test_cfrnn_only.pipe"
+    PIPE="detector_habcam_test_yolo_only.pipe"
 fi
 
 echo $PIPE
