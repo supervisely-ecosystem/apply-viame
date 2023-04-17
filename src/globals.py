@@ -10,7 +10,7 @@ WORKSPACE_ID = int(sly.env.workspace_id())
 PROJECT_ID = sly.env.project_id(raise_not_found=False)
 DATASET_ID = sly.env.dataset_id(raise_not_found=False)
 
-create_project = os.getenv("modal.state.create_project")
+create_project = os.getenv("modal.state.create_project", True)
 output_project_name = os.getenv("modal.state.output_project_name")
 if not output_project_name:
     output_project_name = f"{api.project.get_info_by_id(PROJECT_ID).name} predicted"

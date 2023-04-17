@@ -86,7 +86,16 @@ sly.Progress("Parsing predictions...", 1)
 if g.create_project:
     free_name = api.project.get_free_name(g.WORKSPACE_ID, g.output_project_name)
     api.project.clone(g.PROJECT_ID, g.WORKSPACE_ID, free_name)
-    output_project_id = api.project.get_info_by_name(g.WORKSPACE_ID, free_name).id
+    try:
+        output_project_id = api.project.get_info_by_name(g.WORKSPACE_ID, free_name).id
+    except AttributeError as exc:
+        sly.logger.error("Error cloning project", extra=dict(
+            free_name=free_name,
+            output_project_name=g.output_project_name,
+            project_id=g.PROJECT_ID,
+            workspace_id=g.WORKSPACE_ID,
+        ))
+        raise exc
 else:
     output_project_id = g.PROJECT_ID
 
