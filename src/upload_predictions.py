@@ -90,13 +90,15 @@ if g.create_project:
     try:
         output_project_id = api.project.get_info_by_name(g.WORKSPACE_ID, free_name).id
     except AttributeError as exc:
-        sly.logger.error("Error cloning project", extra=dict(
+        sly.logger.warn("Error cloning project, retrying in 5 sec", extra=dict(
             free_name=free_name,
             output_project_name=g.output_project_name,
             project_id=g.PROJECT_ID,
             workspace_id=g.WORKSPACE_ID,
         ))
-        raise exc
+        import time
+        time.sleep(5)
+        output_project_id = api.project.get_info_by_name(g.WORKSPACE_ID, free_name).id
 else:
     output_project_id = g.PROJECT_ID
 
