@@ -5,26 +5,56 @@
 
 <p align="center">
   <a href="#Overview">Overview</a> •
-  <a href="#Pretrained-models">Pretrained models</a> •
+  <a href="#Models">Models</a> •
   <a href="#How-To-Run">How To Run</a> •
   <a href="#Acknowledgment">Acknowledgment</a>
 </p>
 
-[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/СHANGE_THE_NAME!!!!)
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervise.ly/apps/supervisely-ecosystem/apply-viame)
 [![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervise.ly/slack)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/СHANGE_THE_NAME!!!!)
-[![views](https://app.supervise.ly/img/badges/views/supervisely-ecosystem/СHANGE_THE_NAME!!!!)](https://supervise.ly)
-[![runs](https://app.supervise.ly/img/badges/runs/supervisely-ecosystem/СHANGE_THE_NAME!!!!)](https://supervise.ly)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/apply-viame)
+[![views](https://app.supervise.ly/img/badges/views/supervisely-ecosystem/apply-viame)](https://supervise.ly)
+[![runs](https://app.supervise.ly/img/badges/runs/supervisely-ecosystem/apply-viame)](https://supervise.ly)
 
 </div>
 
-## Overview
+# Overview
+
+ххх
 
 
-## Models
+# How-To-Run
+
+1. Run the application from Ecosystem or context menu of a project / dataset
+
+2. Select the <a href="#Models">VIAME pipeline</a>, configure the confidence treshold and output settings
+
+3. Click `Run` button
+<img src="" />
+
+## Results
+
+Depending on the save settings you configured earlier, the project will either be updated in-place or a new cloned project with annotations will be created in your workspace
+
+<img src="" />
+
+# Models
+
+Here is a list of all available models
+
+| detector_habcam_test_yolo_only.pipe          |
+|----------------------------------------------|
+| detector_habcam_test_hrnet_only.pipe         |
+| detector_habcam_test_cfrnn_only.pipe         |
+| detector_habcam_test_multi_species_only.pipe |
+| detector_sefsc_bw_species_v2.4m_0.5x.pipe    |
+| detector_sefsc_bw_species_v2.4m_1.0x.pipe    |
+| detector_sefsc_bw_species_v2.4m_2.0x.pipe    |
+| detector_sefsc_bw_species_v2.4s_0.5x.pipe    |
+| detector_sefsc_bw_species_v2.4s_1.0x.pipe    |
+| detector_sefsc_bw_species_v2.4s_2.0x.pipe    |
 
 
-## How-To-Run
+# Acknowledgment
 
-
-## Acknowledgment
+This app is based on the great work `VIAME`: [github](https://github.com/VIAME/VIAME). ![GitHub Org's stars](https://img.shields.io/github/stars/VIAME/VIAME?style=social)
