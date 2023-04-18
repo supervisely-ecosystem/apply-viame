@@ -13,7 +13,7 @@
     "viame_pipeline": "",
     "create_project": true,
     "output_project_name": "",
-    "threshold": 0.5
+    "threshold": 0.25
   },
   "need_gpu": true,
   "community_agent": false,
