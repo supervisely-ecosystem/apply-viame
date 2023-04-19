@@ -45,16 +45,16 @@ Here is a list of all available models
 
 |     VIAME Pipelines       |
 |----------------------------------------------|
-| detector_habcam_test_yolo_only.pipe          |
-| detector_habcam_test_hrnet_only.pipe         |
-| detector_habcam_test_cfrnn_only.pipe         |
-| detector_habcam_test_multi_species_only.pipe |
-| detector_sefsc_bw_species_v2.4m_0.5x.pipe    |
-| detector_sefsc_bw_species_v2.4m_1.0x.pipe    |
-| detector_sefsc_bw_species_v2.4m_2.0x.pipe    |
-| detector_sefsc_bw_species_v2.4s_0.5x.pipe    |
-| detector_sefsc_bw_species_v2.4s_1.0x.pipe    |
-| detector_sefsc_bw_species_v2.4s_2.0x.pipe    |
+| `detector_habcam_test_yolo_only.pipe`          |
+| `detector_habcam_test_hrnet_only.pipe`         |
+| `detector_habcam_test_cfrnn_only.pipe`         |
+| `detector_habcam_test_multi_species_only.pipe` |
+| `detector_sefsc_bw_species_v2.4m_0.5x.pipe`    |
+| `detector_sefsc_bw_species_v2.4m_1.0x.pipe`    |
+| `detector_sefsc_bw_species_v2.4m_2.0x.pipe`    |
+| `detector_sefsc_bw_species_v2.4s_0.5x.pipe`    |
+| `detector_sefsc_bw_species_v2.4s_1.0x.pipe`    |
+| `detector_sefsc_bw_species_v2.4s_2.0x.pipe`    |
 
 
 
