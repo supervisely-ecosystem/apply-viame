@@ -31,13 +31,13 @@ The app contains pretrained models for underwater species detection, and works o
 2. Select the <a href="#Models">VIAME pipeline</a>, configure the confidence treshold and output settings
 
 3. Click `Run` button
-<img src="" />
+<img src="https://user-images.githubusercontent.com/115161827/233068890-34d9f778-8b63-4dc2-b1ac-fb998c7a0590.gif" />
 
 ## Results
 
 Depending on the save settings you configured earlier, the project will either be updated in-place or a new cloned project with annotations will be created in your workspace
 
-<img src="" />
+<img src="https://user-images.githubusercontent.com/115161827/233068904-c92f83e6-8158-4820-8aaa-4ebac16325b5.png" />
 
 # Models
 
