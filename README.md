@@ -5,8 +5,8 @@
 
 <p align="center">
   <a href="#Overview">Overview</a> •
-  <a href="#Models">Models</a> •
   <a href="#How-To-Run">How To Run</a> •
+  <a href="#Models">Models</a> •
   <a href="#Acknowledgment">Acknowledgment</a>
 </p>
 
