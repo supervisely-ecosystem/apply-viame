@@ -43,8 +43,9 @@ Depending on the save settings you configured earlier, the project will either b
 
 Here is a list of all available models
 
-| detector_habcam_test_yolo_only.pipe          |
+|     VIAME Pipelines       |
 |----------------------------------------------|
+| detector_habcam_test_yolo_only.pipe          |
 | detector_habcam_test_hrnet_only.pipe         |
 | detector_habcam_test_cfrnn_only.pipe         |
 | detector_habcam_test_multi_species_only.pipe |
@@ -54,6 +55,7 @@ Here is a list of all available models
 | detector_sefsc_bw_species_v2.4s_0.5x.pipe    |
 | detector_sefsc_bw_species_v2.4s_1.0x.pipe    |
 | detector_sefsc_bw_species_v2.4s_2.0x.pipe    |
+
 
 
 # Acknowledgment
