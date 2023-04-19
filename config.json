@@ -7,9 +7,10 @@
   "icon_cover": true,
   "poster":"https://user-images.githubusercontent.com/115161827/233049075-2a0930bd-d47e-4798-a121-36b11807130e.jpg",
   "categories": [
+    "images",
     "neural network",
     "object detection",
-    "images"
+    "serve"
   ],
   "headless": true,
   "modal_template": "src/modal.html",
