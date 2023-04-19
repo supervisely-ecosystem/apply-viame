@@ -2,7 +2,10 @@
   "name": "Apply VIAME",
   "type": "app",
   "version": "2.0.0",
-  "description": "",
+  "description": "Apply pretrained models for underwater species detection",
+  "icon":"https://user-images.githubusercontent.com/115161827/233052943-69c8e48e-a152-4724-b957-782c1728e0b1.png",
+  "icon_cover": true,
+  "poster":"https://user-images.githubusercontent.com/115161827/233049075-2a0930bd-d47e-4798-a121-36b11807130e.jpg",
   "categories": [
     "neural network",
     "images"
