@@ -1,5 +1,5 @@
 <div align="center" markdown>
-<img src=""/>
+<img src="https://user-images.githubusercontent.com/115161827/233049075-2a0930bd-d47e-4798-a121-36b11807130e.jpg"/>
 
 # Apply VIAME
 
@@ -20,8 +20,9 @@
 
 # Overview
 
-ххх
+This application is an integration of an object detection module of a VIAME, which stands for the "Visual Information Analysis for Marine Environments" framework, a software system for processing and analyzing imagery and video data.
 
+The app contains pretrained models for underwater species detection, and works only with images project. See the list of available models <a href="#Models">here</a>
 
 # How-To-Run
 
