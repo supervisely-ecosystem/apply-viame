@@ -29,5 +29,8 @@
   "task_location": "workspace_tasks",
   "context_menu": {
     "target": ["images_project", "images_dataset"]
+  },
+  "license": {
+    "url": "https://github.com/VIAME/VIAME/blob/main/LICENSE.txt" 
   }
 }
