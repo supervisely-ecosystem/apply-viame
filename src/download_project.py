@@ -1,5 +1,6 @@
 import os
 import supervisely as sly
+from supervisely.project.download import download_async_or_sync
 import globals as g
 import shutil
 
@@ -15,7 +16,7 @@ dataset_ids = None
 if isinstance(g.DATASET_ID, int):
     dataset_ids = [g.DATASET_ID]
 
-sly.download_project(g.api, g.PROJECT_ID, project_path, dataset_ids=dataset_ids, batch_size=50, log_progress=True)
+download_async_or_sync(g.api, g.PROJECT_ID, project_path, dataset_ids=dataset_ids, batch_size=50, log_progress=True)
 
 project = sly.Project(project_path, sly.OpenMode.READ)
 
